@@ -1,42 +1,40 @@
 # shruti
-import re
 import os
-dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname,"data//enquiry.csv")
-enquiries = open(filename,"r")
-data = enquiries.readlines()
-print(data)
-'''def delete_data_by_eq_no (eq_no):
-    if eq_no in data :'''
-#deleting the first row of column names
-del data[0]
-enquiries.close()
-dataList = []
-for line in data:
-    line = line.replace("\n","")
-    res = line.split(",")
-    dataList.append(res)
-print(dataList)
-X = input('Enter the eq_no') 
-    #key=data[0]
-key =0
-for i in range(len(dataList)):
-    print(dataList[i][0])
-    if dataList[i][0] == X:
-        key = i
-    else:
+
+def delete_data_by_eq_no(X):
+    found = False
+    for i in range(len(dataList)):
+        if dataList[i][0] == X:
+            del dataList[i]
+            found = True
+            break
+
+    if not found:
         print("Data Not found")
 
-del dataList[key]   
-print(dataList) 
+    mainList = []
+    for i in range(len(dataList)):
+        x = ', '
+        z = x.join(dataList[i])
+        mainList.append(z)
 
-    
+    return '\n'.join(mainList)
 
+# Read CSV data
+dirname = os.path.dirname(__file__)
+filename = os.path.join(dirname, "data//enquiry.csv")
+with open(filename, "r") as enquiries:
+    data = enquiries.readlines()
 
-   
-    
-'''print (dataList)
-for data in dataList :
-    print(data)
-   # data[0]
-    print (data[0])'''
+# Remove column names
+del data[0]
+
+# Convert data to list of lists
+dataList = [line.strip().split(",") for line in data]
+
+# User input for eq_no
+X = input('Enter the eq_no: ')
+
+# Call function to delete data
+result = delete_data_by_eq_no(X)
+print(result)
