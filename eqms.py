@@ -33,7 +33,7 @@ while True:
     elif choice==4:
         print("Option chosen: 4. View enquiry")
         print("Enquiry Details:")
-        # view_enquiry
+        view_enquiry.enquiry_listing()
 
     elif choice==5:
         print("Option chosen: 5. Delete enquiry")
