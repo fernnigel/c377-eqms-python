@@ -120,4 +120,3 @@ def new_enquiry():
     enquiries.flush()
 
     enquiries.close()
-

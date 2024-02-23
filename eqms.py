@@ -1,4 +1,4 @@
-# main script
+# main script - poulami
 
 import add_enquiry
 import add_products
@@ -16,32 +16,32 @@ while True:
     6. Exit the program''')
     choice=int(input("Enter your choice: "))
     if choice==1:
-        print("1. Add a product")
-        add_products
+        print("Option chosen: 1. Add a product")
+        add_products.sample_products()
         print("The product has been successfully added!!")
 
     elif choice==2:
-        print("2. Add a source")
-        add_source
+        print("Option chosen: 2. Add a source")
+        add_source.sample_source()
         print("The source has been successfully added!!")
 
     elif choice==3:
-        print("3. Add an enquiry")
-        add_enquiry
+        print("Option chosen: 3. Add an enquiry")
+        add_enquiry.new_enquiry()
         print("The enquiry has been successfully added!!")
 
     elif choice==4:
-        print("4. View enquiry")
+        print("Option chosen: 4. View enquiry")
         print("Enquiry Details:")
-        view_enquiry
+        # view_enquiry
 
     elif choice==5:
-        print("5. Delete enquiry")
-        delete_enquiry
+        print("Option chosen: 5. Delete enquiry")
+        # delete_enquiry
         print("Successfully deleted the enquiry!!")
 
     elif choice==6:
-        print("6. Exit")
+        print("Option chosen: 6. Exit")
         print("Exiting the Menu....")
         break
     else:
