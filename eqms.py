@@ -14,7 +14,7 @@ while True:
     4. View enquiry
     5. Delete enquiry
     6. Exit the program''')
-    choice=int(input("Enter your choice: "))
+    choice=int(input("Enter your choice [1-6]: "))
     if choice==1:
         print("Option chosen: 1. Add a product")
         add_products.sample_products()
@@ -37,7 +37,7 @@ while True:
 
     elif choice==5:
         print("Option chosen: 5. Delete enquiry")
-        # delete_enquiry
+        delete_enquiry.deleting_enquiry()
         print("Successfully deleted the enquiry!!")
 
     elif choice==6:

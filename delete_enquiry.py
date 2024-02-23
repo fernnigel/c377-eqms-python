@@ -1,40 +1,41 @@
 # shruti
 import os
 
-def delete_data_by_eq_no(X):
-    found = False
-    for i in range(len(dataList)):
-        if dataList[i][0] == X:
-            del dataList[i]
-            found = True
-            break
+def deleting_enquiry():
+    def delete_data_by_eq_no(X):
+        found = False
+        for i in range(len(dataList)):
+            if dataList[i][0] == X:
+                del dataList[i]
+                found = True
+                break
 
-    if not found:
-        print("Data Not found")
+        if not found:
+            print("Data Not found")
 
-    mainList = []
-    for i in range(len(dataList)):
-        x = ', '
-        z = x.join(dataList[i])
-        mainList.append(z)
+        mainList = []
+        for i in range(len(dataList)):
+            x = ', '
+            z = x.join(dataList[i])
+            mainList.append(z)
 
-    return '\n'.join(mainList)
+        return '\n'.join(mainList)
 
-# Read CSV data
-dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, "data//enquiry.csv")
-with open(filename, "r") as enquiries:
-    data = enquiries.readlines()
+    # Read CSV data
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, "data//enquiry.csv")
+    with open(filename, "r") as enquiries:
+        data = enquiries.readlines()
 
-# Remove column names
-del data[0]
+    # Remove column names
+    del data[0]
 
-# Convert data to list of lists
-dataList = [line.strip().split(",") for line in data]
+    # Convert data to list of lists
+    dataList = [line.strip().split(",") for line in data]
 
-# User input for eq_no
-X = input('Enter the eq_no: ')
+    # User input for eq_no
+    X = input('Enter the eq_no: ')
 
-# Call function to delete data
-result = delete_data_by_eq_no(X)
-print(result)
+    # Call function to delete data
+    result = delete_data_by_eq_no(X)
+    print(result)
