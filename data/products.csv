@@ -1,8 +1,3 @@
-code,name,price,description
-
-001,Widget A,15.99, good
-002,Widget B,24.99, worse
-003, tv , 23.44, good
-004 , refrigrator , 78.99 , good
-005, desk , 67.9 worse
-
+code,name,price,description 
+001,Widget A,15.99,Widget A description...
+002,Widget B,24.99,Widget B description...

@@ -1,0 +1,3 @@
+eq_no,date,name,contact_person,address,phone,email,source,remarks,product_id,product_name,quantity,price,total
+1,2024-02-23,ABC Company,John Doe,123 Main Street,555-123-4567,johndoe@example.com,Website,New customer,001,Widget A,10,15.99,159.90
+2,2024-02-23,XYZ Corporation,Jane Smith,456 Elm Street,555-987-6543,janesmith@example.com,Referral,Existing customer,002,Widget B,5,24.99,124.95
