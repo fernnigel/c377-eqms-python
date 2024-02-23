@@ -3,3 +3,4 @@ eq_no,date,name,contact_person,address,phone,email,source,remarks,product_id,pro
 2,2024-02-23,XYZ Corporation,Jane Smith,456 Elm Street,555-987-6543,janesmith@example.com,Referral,Existing customer,002,Widget B,5,24.99,124.95
 3,2024-02-23,123 Corp.,David Johnson,789 Oak St,555-9012,davidjohnson@example.com,Email Campaign,New lead,003,Widget C,20,3.49,69.80
 4,2024-02-23,LMN Ltd.,Sarah Lee,101 Pine St,555-3456,sarahlee@example.com,Trade Show,Follow-up required,004,Widget D,8,9.99,79.92
+5,2023-09-23,James Charles,James doe,1223 blue hills,2171247912,james@hotmail.com,Website,no remarks,004,refrigrator,1,399,399.0
