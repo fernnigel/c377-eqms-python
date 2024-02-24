@@ -7,22 +7,24 @@ import delete_enquiry
 import view_enquiry
 
 while True:
-    print('''       ~~~ Menu ~~~
+    print('''       
+          ~~~ Menu ~~~
     1. Add a product
     2. Add a source
     3. Add an enquiry
     4. View enquiry
     5. Delete enquiry
     6. Exit the program''')
+    print()
     choice=int(input("Enter your choice [1-6]: "))
     if choice==1:
         print("Option chosen: 1. Add a product")
-        add_products.sample_products()
+        add_products.adding_products()
         print("The product has been successfully added!!")
 
     elif choice==2:
         print("Option chosen: 2. Add a source")
-        add_source.sample_source()
+        add_source.adding_source()
         print("The source has been successfully added!!")
 
     elif choice==3:
