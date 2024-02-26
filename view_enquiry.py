@@ -15,7 +15,7 @@ def enquiry_listing():
         datalist.append(res)
 
     while True:
-        print("\n1. Print all enquires\n2. Print enquiry by id\n3.exit")
+        print("\n1. Print all enquires\n2. Print enquiry by id\n3. exit")
         choice = int(input("choice:"))
         if(choice == 1):
             for data in datalist:

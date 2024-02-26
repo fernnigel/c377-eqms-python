@@ -16,7 +16,7 @@ def adding_products():
         dirname = os.path.dirname(__file__)
         filename = os.path.join(dirname, "data")
 
-        enquiries = open(filename+"\\enquiry.csv","r")
+        enquiries = open(filename+"\\products.csv","r")
 
         data = enquiries.readlines()
 
