@@ -32,7 +32,7 @@ def adding_source():
         sources.write(f"{int(dataList[-1][0]) + 1},{type}\n")
 
     # # Printing the content of the CSV file after writing
-    # print("Data written to CSV file:")
-    # with open(filename, "r") as sources:
-    #     for line in sources:
-    #         print(line.strip())
+    print("Source added ✔\n\nSources available are:")
+    with open(filename+"\\sources.csv", "r") as sources:
+        for line in sources:
+            print(line.strip())

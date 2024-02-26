@@ -51,8 +51,8 @@ def adding_products():
             products.write(f"{int(dataList[-1][0]) + 1},{name},{price},{description}\n")
 
         # Print the content of the CSV file after writing
-        print("Product added ✔")
-        # with open(filename+"\\products.csv", "r") as products:
-        #     for line in products:
-        #         print(line.strip())  # Strip newline character for cleaner output
+        print("Product added ✔\n\nProducts available are:")
+        with open(filename+"\\products.csv", "r") as products:
+            for line in products:
+                print(line.strip())  # Strip newline character for cleaner output
     Products_csv()
