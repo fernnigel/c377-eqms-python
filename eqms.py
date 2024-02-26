@@ -41,7 +41,6 @@ while True:
         elif choice==5:
             print("Option chosen: 5. Delete enquiry")
             delete_enquiry.deleting_enquiry()
-            print("Successfully deleted the enquiry!!")
 
         elif choice==6:
             print("Option chosen: 6. Exit")

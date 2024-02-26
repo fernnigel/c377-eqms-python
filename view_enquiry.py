@@ -23,6 +23,10 @@ def enquiry_listing():
                     print(f"{col}|",end="")
                 print()
         elif(choice == 2):
+            for data in datalist:
+                for col in data:
+                    print(f"{col}|",end="")
+                print()
             id = int(input("Enter id:"))
             for i in range(1,len(datalist)):
 
