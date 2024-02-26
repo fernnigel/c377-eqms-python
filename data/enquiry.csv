@@ -4,3 +4,4 @@ eq_no,date,name,contact_person,address,phone,email,source,remarks,product_id,pro
 3,2024-02-23,123 Corp.,David Johnson,789 Oak St,555-9012,davidjohnson@example.com,Email Campaign,New lead,003,Widget C,20,3.49,69.80
 4,2024-02-23,LMN Ltd.,Sarah Lee,101 Pine St,555-3456,sarahlee@example.com,Trade Show,Follow-up required,004,Widget D,8,9.99,79.92
 5,2023-09-23,James Charles,James doe,1223 blue hills,2171247912,james@hotmail.com,Website,no remarks,004,refrigrator,1,399,399.0
+6,2024-02-21,PQR Company,Zoe Doe,9875 Hill Rd,6492866800,zoe@gmail.com,Website,Great product,004,refrigrator,1,78.99,78.99
