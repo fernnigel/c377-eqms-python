@@ -158,4 +158,3 @@ def new_enquiry():
     enquiries.flush()
 
     enquiries.close()
-new_enquiry()
