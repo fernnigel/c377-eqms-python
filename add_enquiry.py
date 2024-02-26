@@ -49,7 +49,7 @@ def new_enquiry():
     Source logic
     """
 
-    source = open(filename+"\\source.csv","r")
+    source = open(filename+"\\sources.csv","r")
     source_data = source.readlines()
     source.close()
 
