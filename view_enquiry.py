@@ -41,6 +41,3 @@ def enquiry_listing():
         else:
             print("invalid choice")
         # print(datalist)
-        
-
-enquiry_listing()
