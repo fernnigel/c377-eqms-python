@@ -36,5 +36,3 @@ def adding_source():
     # with open(filename, "r") as sources:
     #     for line in sources:
     #         print(line.strip())
-
-adding_source()
