@@ -5,6 +5,12 @@ import os
 dirname = os.path.dirname(__file__) 
 filename = os.path.join(dirname,"data")
 
+def not_null(input_str):
+    if(input_str != ""):
+        return True
+    else:
+        return False
+
 def new_enquiry():
 
     enquiries = open(filename+"\\enquiry.csv","r")
@@ -25,26 +31,55 @@ def new_enquiry():
 
     # print(data)
 
-    print(f"Last index: {dataList[-1][0]}")
+    # print(f"Last index: {dataList[-1][0]}")
 
 
     """
     Taking input
     """
 
-    eq_date = input('enter date(yyyy-mm-dd): ')
     while True:
+        eq_date = input('enter date(yyyy-mm-dd): ')
         if(re.match("^[0-9]{4}-[0-9]{2}-[0-9]{2}$",eq_date)):
             break
         else:
             print("wrong format")
 
+    while True:
+        name = input('Enter customer name: ')
+        if(re.match("^[^ ][a-zA-Z ]+$",name)):
+            break
+        else:
+            print("name cannot be null")
 
-    name = input('Enter name: ')
-    contact_person = input('Enter contact_person: ')
-    address = input('Enter address:')
-    phone = input('Enter phone:')
-    email = input('Enter email:')
+    while True:
+        contact_person = input('Enter name of contact_person: ')
+        if(re.match("^[^ ][a-zA-Z ]+$",contact_person)):
+            break
+        else:
+            print("contact_person cannot be null")
+
+    while True:
+        address = input('Enter customer address: ')
+        if(not_null(address)):
+            break
+        else:
+            print("address cannot be null")
+
+    while True:
+        phone = input('Enter phone:')
+        if(re.match("^[0-9]{10}$",phone)):
+            break
+        else:
+            print("wrong format")
+    
+    while True:
+        email = input('Enter email:')
+        if(re.match("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$",email)):
+            break
+        else:
+            print("wrong format")
+
     """
     Source logic
     """
@@ -66,9 +101,7 @@ def new_enquiry():
     while True:
         source = input('Enter source id:')
         if(source in source_ids.keys()):
-
             sourceType = source_ids[source]
-
             break
         else:
             print("No such id")
@@ -76,6 +109,10 @@ def new_enquiry():
     print(sourceType)
 
     remarks = input('Enter remarks:')
+
+    if(remarks==""):
+        remarks = "NA"
+    
     """
     Product logic
     """
@@ -107,8 +144,8 @@ def new_enquiry():
     print(productType)
     # product_id = input('Enter product_id')
     # product_name = input('Enter ')
-    quantity = input('Enter Quantity:')
-    price = input('Enter price:')
+    quantity = int(input('Enter Quantity:'))
+    price = float(input('Enter price:'))
     total = int(quantity) * float(price)
 
     final_add = f"{int(dataList[-1][0]) + 1},{eq_date},{name},{contact_person},{address},{phone},{email},{sourceType},{remarks},{product},{productType},{quantity},{price},{total}\n"
@@ -121,3 +158,4 @@ def new_enquiry():
     enquiries.flush()
 
     enquiries.close()
+new_enquiry()

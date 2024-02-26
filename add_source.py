@@ -3,29 +3,38 @@
 import os 
 
 def adding_source():
-    def validate_id(id):
-        # Checking if id is a positive integer
-        return id.isdigit() and int(id) >= 1
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, "data")
 
-    def source_csv():
-        dirname = os.path.dirname(__file__)
-        filename = os.path.join(dirname, "data\\sources.csv")
+    enquiries = open(filename+"\\sources.csv","r")
 
-        while True:
-            id = input("Enter source id (positive integer): ")
-            if validate_id(id):
-                break
-            else:
-                print("Invalid id. Please enter a positive integer.")
+    data = enquiries.readlines()
 
-        type = input("Enter source type: ")
+    #deleting the first row of column names
+    del data[0]
 
-        with open(filename, "a") as sources:
-            sources.write(f"{id},{type}\n")
+    enquiries.close()
 
-        # Printing the content of the CSV file after writing
-        print("Data written to CSV file:")
-        with open(filename, "r") as sources:
-            for line in sources:
-                print(line.strip())  
-    source_csv()
+    dataList = []
+
+    for line in data:
+        line = line.replace("\n","")
+        res = line.split(",")
+        dataList.append(res)
+
+    # print(data)
+
+    # print(f"Last index: {dataList[-1][0]}")
+
+    type = input("Enter source type: ")
+
+    with open(filename+"\\sources.csv", "a") as sources:
+        sources.write(f"{int(dataList[-1][0]) + 1},{type}\n")
+
+    # # Printing the content of the CSV file after writing
+    # print("Data written to CSV file:")
+    # with open(filename, "r") as sources:
+    #     for line in sources:
+    #         print(line.strip())
+
+adding_source()
